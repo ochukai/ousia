@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ousia~~~</title>
+
+    <!-- Bootstrap styles -->
+    <link href="css/vendor/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="css/vendor/bootstrap/bootstrap-theme.css" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link href="css/vendor/font-awesome/font-awesome.css" rel="stylesheet">
+    <!-- Styles -->
+    <link id="theme-styles" href="css/style-orange-gray.css" rel="stylesheet">
+    <link href="css/settings-panel.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="settings-toggle">
+        <a href="#" class="icon-cog" id="toggle"><i></i></a>
+    </div>
+
+    <div class="settings-panel" style="hidden">
+        <div class="title">
+            Switch Color Theme
+        </div>
+
+        <div class="theme">
+            <div class="name">Orange - Gray</div>
+            <a href="#" id="color-og" class="colors">
+                <div style="background: #F1654C"></div>
+                <div style="background: #3E4651"></div>
+            </a>
+        </div>
+
+        <div class="theme">
+            <div class="name">Roll</div>
+            <a href="#" id="color-roll" class="colors">
+                <div style="background: #fff"></div>
+                <div style="background: #F1654C"></div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div id="time-row" class="row">
+            <div id="time" class="col-md-12">
+                <span>00:00</span>
+            </div>
+        </div>
+
+        <div id="time-below-row" class="row">
+            <div class="col-md-12">
+                <!--  chaosers  -->
+                <span id="chaos"></span>
+            </div>
+        </div>
+
+        <div id="grades-row" class="row">
+            <div class="col-md-12">
+                <ul id="grades">
+                    <li>N\A</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <script src="js/vendor/jquery/jquery-1.10.2.min.js"></script>
+    <script src="js/vendor/jquery/jquery.animate-colors.js"></script>
+
+    <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+
+    <script src="js/settings-panel.js"></script>
+    <script src="js/settings-themes.js"></script>
+    <script src="js/ousia.js"></script>
+    <script>
+        $(function () {
+            new Oarsman();
+        });
+    </script>
+
+</body>
+
+</html>
