@@ -185,27 +185,27 @@
         var self = this;
         
         $(document)
-        .keydown(function (event) {
-            console.log('keydown:', event.keyCode);
-            // end 
-            if (self.isRunning) {
-                self.end();
-                return;
-            }
-            // start
-            if (event.keyCode === 32 && !self.isPreparing) {
-                self.prepare();
-                return;
-            }
-        })
-        .keyup(function (event) {
-            console.log('keyup:', event.keyCode);
-            if (event.keyCode === 32 // space
-                    && self.isPreparing 
-                    && self.isPrepareWell()) {
-                self.start();
-            }
-        });
+            .keydown(function (event) {
+                console.log('keydown:', event.keyCode);
+                // end 
+                if (self.isRunning) {
+                    self.end();
+                    return;
+                }
+                // start
+                if (event.keyCode === 32 && !self.isPreparing) {
+                    self.prepare();
+                    return;
+                }
+            })
+            .keyup(function (event) {
+                console.log('keyup:', event.keyCode);
+                if (event.keyCode === 32 // space
+                        && self.isPreparing 
+                        && self.isPrepareWell()) {
+                    self.start();
+                }
+            });
     };
     
     function setText (sec, ms) {
